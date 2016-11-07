@@ -4,7 +4,8 @@ export interface IUser {
   username: string,
   name: string,
   email: string,
-  group_id: any
+  group_id: any,
+  group_name?: string
 }
 
 export interface IGroup {

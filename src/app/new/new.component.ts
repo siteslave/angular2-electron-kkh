@@ -36,7 +36,7 @@ export class NewComponent implements OnInit {
     this.userService.getGroups()
       .then((res: IHttpResult) => {
         if (res.ok) {
-          this.groups = <Array<IGroup>>res.rows;
+          this.groups = <Array<IGroup>>res.groups;
         } else {
           alert(JSON.stringify(res.err));
         }

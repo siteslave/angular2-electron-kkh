@@ -16,6 +16,7 @@
       <th>Username</th>
       <th>Name</th>
       <th>Email</th>
+      <th>Group</th>
       <th>#</th>
     </tr>
   </thead>
@@ -25,6 +26,7 @@
       <td>{{ u.username }}</td>
       <td>{{ u.name }}</td>
       <td>{{ u.email }}</td>
+      <td>{{ u.group_name }}</td>
       <td>
         <div class="button-group">
           <button class="btn btn-default" (click)="edit(u)">
