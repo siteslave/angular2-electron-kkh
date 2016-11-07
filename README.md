@@ -2,9 +2,9 @@
 
 ## Dependencies
 
-- Angular Cli
+- Angular Cli [https://cli.angular.io](https://cli.angular.io)
 - RESTful Server [https://github.com/siteslave/rest-server](https://github.com/siteslave/rest-server)
-- Electron
+- Electron [http://electron.atom.io](http://electron.atom.io)
 
 # Installation
 

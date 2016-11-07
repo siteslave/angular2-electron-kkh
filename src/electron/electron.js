@@ -16,10 +16,10 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    fullscreen: true
+    fullscreen: false
   })
 
-  // mainWindow.maximize();
+  mainWindow.maximize();
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
