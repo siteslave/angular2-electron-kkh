@@ -1,0 +1,40 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+
+<a href="/new" routerLink="/new" class="btn btn-success pull-xs-right">
+  <i class="fa fa-plus"></i> เพิ่มรายการ
+</a>
+<a href="/users" (click)="logOut()" class="btn btn-danger pull-xs-right">
+  <i class="fa fa-sign-out"></i> Log Out
+</a>
+<p></p>
+<table class="table table hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>{{ u.id }}</td>
+      <td>{{ u.username }}</td>
+      <td>{{ u.name }}</td>
+      <td>{{ u.email }}</td>
+      <td>
+        <div class="button-group">
+          <button class="btn btn-default" (click)="edit(u)">
+            <i class="fa fa-pencil"></i>
+          </button>
+          <button class="btn btn-danger" (click)="remove(u)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,30 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#" routerLink="/users">Home</a></li>
+  <li class="breadcrumb-item active">New user</li>
+</ol>
+<p></p>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <form>
+      <div class="form-group">
+        <label>Username</label>
+        <input [disabled]="id" type="text" class="form-control" [(ngModel)]="user.username" name="username" />
+      </div>
+      <div class="form-group">
+        <label>Fullname</label>
+        <input type="text" class="form-control" rows="3" [(ngModel)]="user.name" name="name" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" rows="3" [(ngModel)]="user.email" name="email" />
+      </div>
+        <div class="form-group">
+        <label>Group</label>
+        <select class="form-control" [(ngModel)]="user.group_id" name="group_id">
+          <option *ngFor="let g of groups" [value]="g.id">{{ g.name }}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" [disabled]="!user.username || !user.name || !user.email" (click)="save()">Save</button>
+    </form>
+  </div>
+</div>
